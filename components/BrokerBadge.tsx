@@ -54,15 +54,15 @@ export default function BrokerBadge() {
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-          <span className="text-[10px] sm:text-[11px] font-medium text-emerald-700 uppercase tracking-wide">
+          <span className="text-[10px] sm:text-[11px] font-medium text-emerald-400 uppercase tracking-wide">
             Disponible maintenant
           </span>
         </div>
-        <p className="font-serif text-base sm:text-lg leading-tight text-slate-900 mt-0.5 truncate">
+        <p className="font-serif text-base sm:text-lg leading-tight text-white mt-0.5 truncate">
           {BROKER.name}
         </p>
-        <p className="text-[11px] sm:text-xs text-[var(--color-muted-2)] truncate">
-          {BROKER.title} — {BROKER.region}
+        <p className="text-[11px] sm:text-xs text-[var(--color-muted)] truncate">
+          {BROKER.title} — {BROKER.agency}
         </p>
       </div>
 

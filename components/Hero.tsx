@@ -29,7 +29,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
             {SECTORS.map((s) => (
               <span
                 key={s}
-                className="px-3 py-1.5 rounded-full text-xs font-medium text-[var(--color-brand-200)] bg-white/70 border border-black/5 shadow-[0_2px_8px_-4px_rgba(30,24,24,0.18)]"
+                className="px-3 py-1.5 rounded-full text-xs font-medium text-[var(--color-brand-200)] bg-white/[0.06] border border-white/10"
               >
                 {s}
               </span>
@@ -43,10 +43,9 @@ export default function Hero({ onStart }: { onStart: () => void }) {
           <span className="font-medium tracking-wide ai-shimmer">Calculateur Net Vendeur</span>
         </div>
 
-        {/* Titre H1 */}
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[var(--color-brand-100)] leading-[1.05] tracking-tight text-balance">
-          Découvre combien il te resterait{" "}
-          <span className="text-[var(--color-brand-500)]">vraiment</span> après la vente
+        {/* Titre H1 — grand serif rouge sur noir (style The Agency) */}
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[var(--color-brand-500)] leading-[1.05] tracking-tight text-balance">
+          Découvre combien il te resterait <span className="italic">vraiment</span> après la vente
         </h1>
 
         {/* Divider doré */}

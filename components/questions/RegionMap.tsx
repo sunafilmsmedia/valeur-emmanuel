@@ -13,7 +13,7 @@ interface Props {
 export default function RegionMap({ value, onChange }: Props) {
   return (
     <div className="space-y-3">
-      <div className="relative w-full h-[440px] sm:h-[500px] rounded-2xl overflow-hidden border border-black/10 shadow-[0_30px_80px_-30px_rgba(40,12,14,0.6)]">
+      <div className="relative w-full h-[440px] sm:h-[500px] rounded-2xl overflow-hidden border border-white/12 shadow-[0_30px_80px_-30px_rgba(40,12,14,0.6)]">
         <Inner value={value} onChange={onChange} />
       </div>
       <p className="text-xs text-[var(--color-muted-2)] text-center">

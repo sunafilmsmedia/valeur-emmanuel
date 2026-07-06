@@ -19,19 +19,19 @@ interface Props {
 const VERDICT_BADGE: Record<NetVerdict, { label: string; color: string; bg: string; ring: string }> = {
   tres_confortable: {
     label: "Très confortable",
-    color: "text-emerald-700",
+    color: "text-emerald-400",
     bg: "bg-emerald-600/10",
     ring: "ring-emerald-600/30",
   },
   a_optimiser: {
     label: "Possible — à optimiser",
-    color: "text-amber-700",
+    color: "text-amber-400",
     bg: "bg-amber-600/10",
     ring: "ring-amber-600/30",
   },
   frais_caches: {
     label: "Attention aux frais",
-    color: "text-rose-700",
+    color: "text-rose-400",
     bg: "bg-rose-600/10",
     ring: "ring-rose-600/30",
   },
@@ -135,12 +135,12 @@ function NetCard({ calc }: { calc: CalcResult }) {
       transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className="
         relative overflow-hidden rounded-3xl p-7 sm:p-9
-        bg-gradient-to-br from-[var(--color-brand-800)] via-[var(--color-brand-700)] to-[var(--color-brand-900)]
-        shadow-[0_30px_80px_-30px_var(--color-brand-shadow-deep),0_0_0_1px_rgba(255,255,255,0.06)_inset]
+        bg-gradient-to-br from-[var(--color-brand-500)] via-[var(--color-brand-600)] to-[var(--color-brand-800)]
+        shadow-[0_30px_90px_-25px_var(--color-brand-shadow),0_0_0_1px_rgba(255,255,255,0.08)_inset]
       "
     >
-      <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-[var(--color-brand-400)]/25 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-[var(--color-gold)]/10 blur-3xl" />
+      <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-[var(--color-brand-400)]/30 blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-black/20 blur-3xl" />
 
       <div className="relative text-center">
         <p className="text-[11px] uppercase tracking-[0.2em] text-white/70">
@@ -189,7 +189,7 @@ function Breakdown({ calc }: { calc: CalcResult }) {
         Le détail de ton calcul
       </h3>
       <div className="glass-card rounded-2xl overflow-hidden">
-        <ul className="divide-y divide-black/[0.06]">
+        <ul className="divide-y divide-white/[0.08]">
           {calc.lineItems.map((item) => (
             <LineRow key={item.key} item={item} />
           ))}
@@ -198,7 +198,7 @@ function Breakdown({ calc }: { calc: CalcResult }) {
           <span className="font-serif text-lg sm:text-xl text-[var(--color-brand-100)]">
             Montant net estimé
           </span>
-          <span className="font-serif text-2xl sm:text-3xl text-[var(--color-brand-600)]">
+          <span className="font-serif text-2xl sm:text-3xl text-[var(--color-brand-300)]">
             {formatCurrency(Math.max(0, calc.netEstimate))}
           </span>
         </div>
@@ -231,7 +231,7 @@ function LineRow({ item }: { item: LineItem }) {
             ? "font-medium text-[var(--color-brand-100)]"
             : isMuted
             ? "text-[var(--color-muted-2)]"
-            : "text-rose-600"
+            : "text-rose-400"
         }`}
       >
         {isBase
@@ -436,7 +436,7 @@ function ConfirmationBlock({ stored, firstName }: { stored: boolean; firstName: 
       `}
     >
       <div className="flex items-center gap-2 mb-2">
-        <svg className="w-5 h-5 text-emerald-600" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg className="w-5 h-5 text-emerald-400" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4 10L8 14L16 6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <p className="font-serif text-xl sm:text-2xl text-[var(--color-brand-100)]">
@@ -487,7 +487,7 @@ function Footer({
       {!hideRestart && (
         <button
           onClick={onRestart}
-          className="text-sm text-[var(--color-muted)] hover:text-[var(--color-brand-300)] transition-colors underline underline-offset-4 decoration-black/15 hover:decoration-[var(--color-brand-400)]"
+          className="text-sm text-[var(--color-muted)] hover:text-[var(--color-brand-300)] transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-[var(--color-brand-400)]"
         >
           Refaire mon calcul
         </button>

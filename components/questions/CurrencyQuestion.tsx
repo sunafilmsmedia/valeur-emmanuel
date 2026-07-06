@@ -43,7 +43,7 @@ export default function CurrencyQuestion({
           placeholder={placeholder}
           className="
             flex-1 font-serif text-4xl sm:text-5xl text-[var(--color-ink)] bg-transparent
-            placeholder:text-black/20 focus:outline-none w-full
+            placeholder:text-white/25 focus:outline-none w-full
             tracking-wide
           "
         />

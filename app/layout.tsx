@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import MetaPixel from "@/components/MetaPixel";
 import Clarity from "@/components/Clarity";
 import "./globals.css";
@@ -10,7 +10,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
+// Serif d'affichage lourd et contrasté — look éditorial « The Agency ».
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr-CA" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
+    <html lang="fr-CA" className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
       <body className="min-h-screen antialiased">
         <MetaPixel />
         <Clarity />

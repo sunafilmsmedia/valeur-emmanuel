@@ -133,7 +133,7 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
       </div>
 
       {/* Footer controls */}
-      <footer className="mt-8 sm:mt-10 pt-6 border-t border-black/5">
+      <footer className="mt-8 sm:mt-10 pt-6 border-t border-white/10">
         <div className="flex items-center justify-between gap-4">
           <button
             type="button"
@@ -178,9 +178,9 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
               className="
                 inline-flex items-center gap-2
                 px-6 py-2.5 rounded-full text-sm font-medium
-                bg-black/[0.04] border border-black/10
+                bg-white/[0.06] border border-white/12
                 text-[var(--color-brand-100)]
-                hover:bg-black/[0.07] hover:border-black/15
+                hover:bg-white/[0.09] hover:border-white/18
                 disabled:opacity-40 disabled:cursor-not-allowed
                 transition-all
               "

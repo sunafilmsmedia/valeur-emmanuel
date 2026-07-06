@@ -29,13 +29,13 @@ export default function ChoiceQuestion({ choices, value, onChange }: Props) {
               ${
                 selected
                   ? "bg-[var(--color-brand-500)]/[0.08] border border-[var(--color-brand-500)]/70 shadow-[0_0_0_3px_rgba(220,38,38,0.12)]"
-                  : "glass-card hover:border-black/15 hover:bg-black/[0.02]"
+                  : "glass-card hover:border-white/18 hover:bg-white/[0.05]"
               }
             `}
           >
             <div className="flex items-center justify-between gap-4">
               <div className="min-w-0 flex-1">
-                <p className={`font-medium ${selected ? "text-[var(--color-brand-700)]" : "text-[var(--color-brand-100)]"}`}>
+                <p className={`font-medium ${selected ? "text-[var(--color-brand-300)]" : "text-[var(--color-brand-100)]"}`}>
                   {c.label}
                 </p>
                 {c.hint && (
@@ -48,7 +48,7 @@ export default function ChoiceQuestion({ choices, value, onChange }: Props) {
                   ${
                     selected
                       ? "bg-[var(--color-brand-500)] border-[var(--color-brand-500)] shadow-[0_0_10px_rgba(220,38,38,0.45)]"
-                      : "border-black/15 group-hover:border-black/30"
+                      : "border-white/18 group-hover:border-white/35"
                   }
                 `}
                 aria-hidden

@@ -28,11 +28,11 @@ function FitTerritory() {
 // Fond : carte des secteurs desservis (Rive-Sud), ton-sur-ton beige.
 export default function HeroBackground() {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden" style={{ background: "#ffffff" }}>
-      {/* Carte désaturée, discrète sur fond blanc */}
+    <div className="absolute inset-0 -z-10 overflow-hidden" style={{ background: "#0a0a0a" }}>
+      {/* Carte sombre, discrète sur fond noir */}
       <div
         className="map-no-interaction absolute inset-0"
-        style={{ filter: "grayscale(0.85) brightness(1.06) contrast(1.02)" }}
+        style={{ filter: "brightness(0.85) contrast(1.1)" }}
       >
         <MapContainer
           center={REGION_CENTER}
@@ -48,7 +48,7 @@ export default function HeroBackground() {
           style={{ width: "100%", height: "100%" }}
         >
           <TileLayer
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             attribution='&copy; OpenStreetMap, &copy; CARTO'
             subdomains={["a", "b", "c", "d"]}
           />
@@ -62,8 +62,8 @@ export default function HeroBackground() {
                 color: "#ffffff",
                 weight: 2,
                 opacity: 0.9,
-                fillColor: "#dc2626",
-                fillOpacity: 0.9,
+                fillColor: "#e01e26",
+                fillOpacity: 0.95,
               }}
             />
           ))}
@@ -71,18 +71,18 @@ export default function HeroBackground() {
         </MapContainer>
       </div>
 
-      {/* Teinte neutre très légère — garde tout dans le ton du fond blanc */}
+      {/* Assombrissement global — garde la carte discrète sur le noir */}
       <div
         className="absolute inset-0"
-        style={{ background: "#f2f2f4", mixBlendMode: "multiply", opacity: 0.12 }}
+        style={{ background: "#0a0a0a", opacity: 0.35 }}
       />
 
-      {/* Voile radial blanc, juste derrière le texte central */}
+      {/* Voile radial noir, juste derrière le texte central */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 34%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.30) 55%, rgba(255,255,255,0.62) 100%)",
+            "radial-gradient(ellipse at 50% 34%, rgba(10,10,10,0) 0%, rgba(10,10,10,0.55) 55%, rgba(10,10,10,0.85) 100%)",
         }}
       />
     </div>

@@ -147,7 +147,7 @@ export default function ContactForm({ answers, verdict, onSubmitted }: Props) {
             onChange={(e) => setConsent(e.target.checked)}
             className="peer sr-only"
           />
-          <span className="block w-5 h-5 rounded-md border border-black/15 bg-black/[0.03] peer-checked:bg-[var(--color-brand-500)] peer-checked:border-[var(--color-brand-400)] transition-colors" />
+          <span className="block w-5 h-5 rounded-md border border-white/18 bg-white/[0.05] peer-checked:bg-[var(--color-brand-500)] peer-checked:border-[var(--color-brand-400)] transition-colors" />
           <svg
             className="absolute inset-0 m-auto w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity"
             viewBox="0 0 12 12"
@@ -239,7 +239,7 @@ function Field({ label, value, onChange, placeholder, type = "text", required, a
           placeholder={placeholder}
           className="
             w-full glass-card rounded-xl px-4 py-3
-            text-[var(--color-ink)] placeholder:text-black/25
+            text-[var(--color-ink)] placeholder:text-white/30
             focus-within:border-[var(--color-brand-400)]/60
             transition-colors
             text-base

@@ -62,7 +62,7 @@ function PercentInput({
           placeholder="4.5"
           className="
             flex-1 font-serif text-4xl sm:text-5xl text-[var(--color-ink)] bg-transparent
-            placeholder:text-black/20 focus:outline-none w-full tracking-wide
+            placeholder:text-white/25 focus:outline-none w-full tracking-wide
           "
         />
         <span className="font-serif text-3xl sm:text-4xl text-[var(--color-brand-500)]">%</span>

@@ -9,7 +9,7 @@ export const BROKER = {
   // Angle marketing : ancien comptable → estimation claire et chiffrée.
   credential: "Ancien comptable",
   experience: "7+ ans d'expérience",
-  agency: "", // ex. « RE/MAX … » — à confirmer
+  agency: "The Agency",
   region: "Rive-Sud",
   specialty: "Rive-Sud · Brossard",
   // ⚠️ PLACEHOLDER — remplacer par le vrai numéro d'Emmanuel.
@@ -18,11 +18,13 @@ export const BROKER = {
   // ⚠️ PLACEHOLDER — remplacer par le vrai courriel.
   email: "emmanuel.bouchard@example.com",
   website: "",
-  slogan: "Des chiffres clairs, pas juste un prix de vente.",
+  slogan: "Le nouveau standard de l'immobilier.",
   // Initiales affichées si aucune photo n'est fournie dans /public.
   initials: "EB",
   // Photo du courtier (dans /public). Vide = fallback sur les initiales.
-  photo: "",
+  photo: "/emmanuel.jpg",
   // Cadrage object-position de la photo dans l'avatar rond (focus visage).
-  photoPosition: "50% 22%",
+  photoPosition: "50% 18%",
+  // Logo de l'agence (dans /public).
+  logo: "/the-agency-logo.png",
 } as const;

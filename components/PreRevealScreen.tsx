@@ -41,7 +41,7 @@ export default function PreRevealScreen({ onContinue }: Props) {
           transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 160, damping: 14 }}
           className="mx-auto mb-7 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400/30 to-[var(--color-brand-500)]/20 border border-emerald-400/40 flex items-center justify-center shadow-[0_10px_40px_-10px_rgba(220,38,38,0.4)]"
         >
-          <svg className="w-7 h-7 text-emerald-600" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <svg className="w-7 h-7 text-emerald-400" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M4 10L8 14L16 6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </motion.div>
@@ -90,9 +90,9 @@ export default function PreRevealScreen({ onContinue }: Props) {
               </svg>
             ) : (
               <span className="flex gap-0.5">
-                <span className="w-1 h-1 rounded-full bg-white/70 animate-pulse" />
-                <span className="w-1 h-1 rounded-full bg-white/70 animate-pulse" style={{ animationDelay: "0.15s" }} />
-                <span className="w-1 h-1 rounded-full bg-white/70 animate-pulse" style={{ animationDelay: "0.3s" }} />
+                <span className="w-1 h-1 rounded-full bg-white/[0.06] animate-pulse" />
+                <span className="w-1 h-1 rounded-full bg-white/[0.06] animate-pulse" style={{ animationDelay: "0.15s" }} />
+                <span className="w-1 h-1 rounded-full bg-white/[0.06] animate-pulse" style={{ animationDelay: "0.3s" }} />
               </span>
             )}
           </span>
@@ -110,7 +110,7 @@ export default function PreRevealScreen({ onContinue }: Props) {
             text-xs sm:text-sm text-[var(--color-muted-2)]
             hover:text-[var(--color-ink)]
             transition-colors
-            underline underline-offset-4 decoration-black/15
+            underline underline-offset-4 decoration-white/20
             block
             disabled:cursor-wait
           "
