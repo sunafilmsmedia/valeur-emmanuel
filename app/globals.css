@@ -2,8 +2,8 @@
 @import "leaflet/dist/leaflet.css";
 
 @theme {
-  /* Serif d'affichage haute-contraste (Didone) — look couverture magazine */
-  --font-serif: "Bodoni Moda", "Didot", "Times New Roman", Georgia, serif;
+  /* Serif d'affichage éditorial (Playfair Display) — élégant et lisible */
+  --font-serif: "Playfair Display", "Georgia", "Times New Roman", serif;
   --font-sans: "DM Sans", "Elza", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Surfaces / fond — noir profond */
@@ -79,13 +79,12 @@ body {
   text-wrap: balance;
 }
 
-/* Titre éditorial — Didone, majuscules, très serré, interligne compact */
+/* Titre éditorial — serif, minuscules, lisible, interligne compact */
 @utility display-title {
   font-family: var(--font-serif);
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  line-height: 0.9;
-  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  font-weight: 600;
 }
 
 /* AI shimmer — rouge → blanc cassé → rouge */

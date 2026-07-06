@@ -76,7 +76,7 @@ export default function ResultsScreen({ analyze, answers, revealChoice, onRestar
         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         className="text-center mb-10"
       >
-        <h1 className="font-serif font-bold uppercase text-3xl sm:text-4xl lg:text-5xl text-[var(--color-brand-100)] leading-[0.98] tracking-[-0.02em] text-balance">
+        <h1 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--color-brand-100)] leading-[1.05] tracking-[-0.01em] text-balance">
           {report.headline}
         </h1>
         <p className="mt-5 text-base sm:text-lg text-[var(--color-muted)] leading-relaxed text-balance max-w-2xl mx-auto">

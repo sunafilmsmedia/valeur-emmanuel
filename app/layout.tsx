@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Bodoni_Moda } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import MetaPixel from "@/components/MetaPixel";
 import Clarity from "@/components/Clarity";
 import "./globals.css";
@@ -10,8 +10,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-// Bodoni Moda — Didone haute-contraste, look couverture magazine.
-const bodoniModa = Bodoni_Moda({
+// Playfair Display — serif éditorial élégant, plus lisible que Bodoni.
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr-CA" className={`${dmSans.variable} ${bodoniModa.variable}`}>
+    <html lang="fr-CA" className={`${dmSans.variable} ${playfair.variable}`}>
       <body className="min-h-screen antialiased">
         <MetaPixel />
         <Clarity />

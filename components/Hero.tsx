@@ -27,13 +27,9 @@ export default function Hero({ onStart }: { onStart: () => void }) {
           Calculateur Net Vendeur · {BROKER.region}
         </p>
 
-        {/* Titre — Didone, majuscules, énorme, rouge (couverture magazine) */}
-        <h1 className="font-serif font-black uppercase text-[var(--color-brand-500)] leading-[0.88] tracking-[-0.03em] text-[15vw] sm:text-7xl lg:text-8xl xl:text-[8.5rem]">
-          Le nouveau
-          <br />
-          standard du
-          <br />
-          net vendeur
+        {/* Titre — serif éditorial, minuscules, rouge, lisible dès l'arrivée */}
+        <h1 className="font-serif font-bold lowercase text-[var(--color-brand-400)] leading-[1.04] tracking-[-0.01em] text-[2.4rem] sm:text-5xl lg:text-6xl xl:text-7xl text-balance">
+          découvre combien il te resterait <span className="italic font-medium">vraiment</span> après la vente
         </h1>
 
         {/* Filet rouge fin */}
@@ -46,8 +42,8 @@ export default function Hero({ onStart }: { onStart: () => void }) {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="mt-8 text-base sm:text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed text-balance"
         >
-          Découvre combien il te resterait vraiment après la vente — hypothèque,
-          pénalité, commission et frais compris.
+          Hypothèque, pénalité, commission, taxes et frais compris — le vrai montant
+          net, pas juste un prix de vente.
         </motion.p>
 
         {/* CTA */}
@@ -63,7 +59,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
               group relative inline-flex items-center justify-center gap-2.5
               px-9 sm:px-11 py-4
               bg-[var(--color-brand-500)] hover:bg-[var(--color-brand-400)]
-              text-white text-sm font-semibold uppercase tracking-[0.15em]
+              text-white text-base font-semibold tracking-wide
               transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0
               shadow-[0_20px_50px_-15px_var(--color-brand-shadow-strong)]
             "
