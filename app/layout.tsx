@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { DM_Sans, Bodoni_Moda } from "next/font/google";
 import MetaPixel from "@/components/MetaPixel";
 import Clarity from "@/components/Clarity";
 import "./globals.css";
@@ -10,12 +10,12 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-// Serif d'affichage lourd et contrasté — look éditorial « The Agency ».
-const dmSerifDisplay = DM_Serif_Display({
+// Bodoni Moda — Didone haute-contraste, look couverture magazine.
+const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
 });
 
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr-CA" className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
+    <html lang="fr-CA" className={`${dmSans.variable} ${bodoniModa.variable}`}>
       <body className="min-h-screen antialiased">
         <MetaPixel />
         <Clarity />

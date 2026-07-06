@@ -49,8 +49,8 @@ export default function PreRevealScreen({ onContinue }: Props) {
         <p className="text-[11px] uppercase tracking-[0.25em] text-[var(--color-brand-300)] mb-3">
           Estimation prête
         </p>
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[var(--color-brand-100)] leading-[1.05] tracking-tight text-balance">
-          Ton estimation est prête.
+        <h1 className="font-serif font-bold uppercase text-4xl sm:text-5xl lg:text-6xl text-[var(--color-brand-100)] leading-[0.95] tracking-[-0.02em] text-balance">
+          Ton estimation est prête
         </h1>
         <p className="mt-5 text-base sm:text-lg text-[var(--color-muted)] leading-relaxed text-balance max-w-md mx-auto">
           Veux-tu ton analyse complète : le détail de chaque frais et ton vrai montant net vendeur ?

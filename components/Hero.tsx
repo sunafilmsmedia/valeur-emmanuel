@@ -3,71 +3,69 @@
 import { motion } from "framer-motion";
 import { BROKER } from "@/lib/broker";
 
-// Secteurs desservis (Rive-Sud).
-const SECTORS = ["Brossard", "Saint-Lambert", "Longueuil", "Boucherville", "Candiac", "La Prairie"];
-
 export default function Hero({ onStart }: { onStart: () => void }) {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-start px-5 sm:px-8 pt-20 sm:pt-28 pb-32">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 pt-24 pb-28 sm:pb-32">
+      {/* Détail éditorial — texte vertical, bord droit */}
+      <div className="pointer-events-none absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 hidden sm:block">
+        <span
+          style={{ writingMode: "vertical-rl" }}
+          className="text-[10px] uppercase tracking-[0.4em] text-[var(--color-ink)]/25"
+        >
+          Édition Rive-Sud — Montréal, QC
+        </span>
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-3xl text-center"
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-4xl w-full text-center"
       >
-        {/* Secteurs desservis — en haut */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.7 }}
-          className="mb-8 sm:mb-10"
-        >
-          <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-muted-2)] mb-3">
-            Rive-Sud de Montréal
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-2 max-w-lg mx-auto">
-            {SECTORS.map((s) => (
-              <span
-                key={s}
-                className="px-3 py-1.5 rounded-full text-xs font-medium text-[var(--color-brand-200)] bg-white/[0.06] border border-white/10"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-        </motion.div>
+        {/* Kicker */}
+        <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-[var(--color-brand-300)] mb-7 sm:mb-9">
+          Calculateur Net Vendeur · {BROKER.region}
+        </p>
 
-        {/* Chip */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs sm:text-sm text-[var(--color-brand-200)] mb-7 sm:mb-9">
-          <span className="relative inline-flex w-2 h-2 rounded-full bg-[var(--color-gold)] text-[var(--color-gold)] pulse-dot" />
-          <span className="font-medium tracking-wide ai-shimmer">Calculateur Net Vendeur</span>
-        </div>
-
-        {/* Titre H1 — grand serif rouge sur noir (style The Agency) */}
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[var(--color-brand-500)] leading-[1.05] tracking-tight text-balance">
-          Découvre combien il te resterait <span className="italic">vraiment</span> après la vente
+        {/* Titre — Didone, majuscules, énorme, rouge (couverture magazine) */}
+        <h1 className="font-serif font-black uppercase text-[var(--color-brand-500)] leading-[0.88] tracking-[-0.03em] text-[15vw] sm:text-7xl lg:text-8xl xl:text-[8.5rem]">
+          Le nouveau
+          <br />
+          standard du
+          <br />
+          net vendeur
         </h1>
 
-        {/* Divider doré */}
-        <div className="mt-8 sm:mt-10 mx-auto w-12 h-px bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent" />
+        {/* Filet rouge fin */}
+        <div className="mt-9 sm:mt-11 mx-auto w-16 h-px bg-[var(--color-brand-500)]/60" />
+
+        {/* Sous-titre — une ligne, blanc cassé */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="mt-8 text-base sm:text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed text-balance"
+        >
+          Découvre combien il te resterait vraiment après la vente — hypothèque,
+          pénalité, commission et frais compris.
+        </motion.p>
 
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.7 }}
-          className="mt-10 sm:mt-12 flex flex-col items-center gap-3"
+          transition={{ delay: 0.65, duration: 0.7 }}
+          className="mt-10 sm:mt-12 flex flex-col items-center gap-4"
         >
           <button
             onClick={onStart}
             className="
-              group relative inline-flex items-center justify-center gap-2
-              px-8 sm:px-10 py-4 rounded-full
-              bg-gradient-to-b from-[var(--color-brand-500)] to-[var(--color-brand-700)]
-              text-white font-medium text-base
-              shadow-[0_20px_50px_-15px_var(--color-brand-shadow-strong),0_0_0_1px_rgba(255,255,255,0.08)_inset]
-              hover:shadow-[0_25px_60px_-10px_var(--color-brand-shadow-strong),0_0_0_1px_rgba(255,255,255,0.12)_inset]
+              group relative inline-flex items-center justify-center gap-2.5
+              px-9 sm:px-11 py-4
+              bg-[var(--color-brand-500)] hover:bg-[var(--color-brand-400)]
+              text-white text-sm font-semibold uppercase tracking-[0.15em]
               transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0
+              shadow-[0_20px_50px_-15px_var(--color-brand-shadow-strong)]
             "
           >
             <span>Calculer mon montant net</span>
@@ -75,39 +73,21 @@ export default function Hero({ onStart }: { onStart: () => void }) {
               <path d="M5 10h10M11 6l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          <p className="text-xs text-[var(--color-muted-2)]">Moins de 2 minutes — gratuit et confidentiel</p>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-muted-2)]">
+            Moins de 2 minutes · gratuit · confidentiel
+          </p>
         </motion.div>
-
-        {/* Sous-titre + signature courtier */}
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.7 }}
-          className="mt-12 sm:mt-14 text-base sm:text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed text-balance"
-        >
-          Hypothèque, pénalité, commission, taxes et frais : on calcule ce qu&apos;il te resterait
-          vraiment dans tes poches. Une estimation claire et chiffrée — pas juste un prix au hasard.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.7 }}
-          className="mt-5 text-sm text-[var(--color-brand-300)]"
-        >
-          Créé avec {BROKER.name} — courtier immobilier sur la Rive-Sud et {BROKER.credential.toLowerCase()}.
-        </motion.p>
       </motion.div>
 
-      {/* Scroll hint */}
-      <motion.div
+      {/* Signature éditoriale — bas centre */}
+      <motion.p
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-24 sm:bottom-10 left-1/2 -translate-x-1/2 text-[10px] text-[var(--color-muted-2)] uppercase tracking-[0.2em]"
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink)]/30 text-center px-4"
       >
-        Confidentiel · Sans engagement
-      </motion.div>
+        {BROKER.agency} · {BROKER.name}, {BROKER.title.toLowerCase()}
+      </motion.p>
     </section>
   );
 }
