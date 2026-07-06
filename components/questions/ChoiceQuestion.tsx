@@ -28,7 +28,7 @@ export default function ChoiceQuestion({ choices, value, onChange }: Props) {
               transition-all duration-200
               ${
                 selected
-                  ? "bg-[var(--color-brand-500)]/[0.08] border border-[var(--color-brand-500)]/70 shadow-[0_0_0_3px_rgba(13,148,136,0.12)]"
+                  ? "bg-[var(--color-brand-500)]/[0.08] border border-[var(--color-brand-500)]/70 shadow-[0_0_0_3px_rgba(220,38,38,0.12)]"
                   : "glass-card hover:border-black/15 hover:bg-black/[0.02]"
               }
             `}
@@ -47,7 +47,7 @@ export default function ChoiceQuestion({ choices, value, onChange }: Props) {
                   shrink-0 w-5 h-5 rounded-full border transition-all
                   ${
                     selected
-                      ? "bg-[var(--color-brand-500)] border-[var(--color-brand-500)] shadow-[0_0_10px_rgba(13,148,136,0.45)]"
+                      ? "bg-[var(--color-brand-500)] border-[var(--color-brand-500)] shadow-[0_0_10px_rgba(220,38,38,0.45)]"
                       : "border-black/15 group-hover:border-black/30"
                   }
                 `}

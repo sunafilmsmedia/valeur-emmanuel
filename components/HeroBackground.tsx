@@ -28,11 +28,11 @@ function FitTerritory() {
 // Fond : carte des secteurs desservis (Rive-Sud), ton-sur-ton beige.
 export default function HeroBackground() {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden" style={{ background: "#ece4d8" }}>
-      {/* Carte désaturée et chaude — plus présente qu'avant */}
+    <div className="absolute inset-0 -z-10 overflow-hidden" style={{ background: "#ffffff" }}>
+      {/* Carte désaturée, discrète sur fond blanc */}
       <div
         className="map-no-interaction absolute inset-0"
-        style={{ filter: "grayscale(0.7) sepia(0.3) brightness(1.0) contrast(1.14)" }}
+        style={{ filter: "grayscale(0.85) brightness(1.06) contrast(1.02)" }}
       >
         <MapContainer
           center={REGION_CENTER}
@@ -59,10 +59,10 @@ export default function HeroBackground() {
               center={[r.lat, r.lng]}
               radius={8}
               pathOptions={{
-                color: "#f2e8d8",
+                color: "#ffffff",
                 weight: 2,
                 opacity: 0.9,
-                fillColor: "#0d9488",
+                fillColor: "#dc2626",
                 fillOpacity: 0.9,
               }}
             />
@@ -71,18 +71,18 @@ export default function HeroBackground() {
         </MapContainer>
       </div>
 
-      {/* Teinte beige (multiply) — garde tout dans le ton du fond, très léger */}
+      {/* Teinte neutre très légère — garde tout dans le ton du fond blanc */}
       <div
         className="absolute inset-0"
-        style={{ background: "#e6dcc9", mixBlendMode: "multiply", opacity: 0.15 }}
+        style={{ background: "#f2f2f4", mixBlendMode: "multiply", opacity: 0.12 }}
       />
 
-      {/* Voile radial léger, juste derrière le texte central */}
+      {/* Voile radial blanc, juste derrière le texte central */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 34%, rgba(236,228,216,0.05) 0%, rgba(236,228,216,0.28) 55%, rgba(236,228,216,0.55) 100%)",
+            "radial-gradient(ellipse at 50% 34%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.30) 55%, rgba(255,255,255,0.62) 100%)",
         }}
       />
     </div>

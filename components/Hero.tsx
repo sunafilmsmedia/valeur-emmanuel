@@ -29,7 +29,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
             {SECTORS.map((s) => (
               <span
                 key={s}
-                className="px-3 py-1.5 rounded-full text-xs font-medium text-[var(--color-brand-200)] bg-white/70 border border-black/5 shadow-[0_2px_8px_-4px_rgba(20,32,29,0.18)]"
+                className="px-3 py-1.5 rounded-full text-xs font-medium text-[var(--color-brand-200)] bg-white/70 border border-black/5 shadow-[0_2px_8px_-4px_rgba(30,24,24,0.18)]"
               >
                 {s}
               </span>

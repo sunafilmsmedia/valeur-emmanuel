@@ -39,7 +39,7 @@ export default function TopLogos() {
         className="fixed top-4 right-4 sm:top-6 sm:right-6 z-30 pointer-events-none"
         aria-hidden
       >
-        <span className="px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-brand-300)] bg-white/70 border border-black/5 shadow-[0_2px_8px_-4px_rgba(20,32,29,0.18)]">
+        <span className="px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-brand-300)] bg-white/70 border border-black/5 shadow-[0_2px_8px_-4px_rgba(30,24,24,0.18)]">
           {BROKER.region}
         </span>
       </motion.div>

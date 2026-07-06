@@ -39,7 +39,7 @@ export default function PreRevealScreen({ onContinue }: Props) {
           initial={{ scale: 0, rotate: -20 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 160, damping: 14 }}
-          className="mx-auto mb-7 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400/30 to-[var(--color-brand-500)]/20 border border-emerald-400/40 flex items-center justify-center shadow-[0_10px_40px_-10px_rgba(13,148,136,0.4)]"
+          className="mx-auto mb-7 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400/30 to-[var(--color-brand-500)]/20 border border-emerald-400/40 flex items-center justify-center shadow-[0_10px_40px_-10px_rgba(220,38,38,0.4)]"
         >
           <svg className="w-7 h-7 text-emerald-600" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M4 10L8 14L16 6" strokeLinecap="round" strokeLinejoin="round" />

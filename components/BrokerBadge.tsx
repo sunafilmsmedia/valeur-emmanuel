@@ -24,7 +24,7 @@ export default function BrokerBadge() {
         cursor-pointer
         group
         transition-shadow duration-300
-        hover:shadow-[0_40px_100px_-30px_rgba(6,50,47,0.45)]
+        hover:shadow-[0_40px_100px_-30px_rgba(90,16,16,0.45)]
       "
       aria-label={`Appeler ${BROKER.name} au ${BROKER.phoneDisplay}`}
     >
@@ -72,8 +72,8 @@ export default function BrokerBadge() {
           w-11 h-11 sm:w-12 sm:h-12 rounded-full
           bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)]
           flex items-center justify-center
-          shadow-[0_8px_22px_-6px_rgba(13,148,136,0.5)]
-          group-hover:shadow-[0_12px_28px_-6px_rgba(13,148,136,0.65)]
+          shadow-[0_8px_22px_-6px_rgba(220,38,38,0.5)]
+          group-hover:shadow-[0_12px_28px_-6px_rgba(220,38,38,0.65)]
           transition-shadow
         ">
           <svg className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8">

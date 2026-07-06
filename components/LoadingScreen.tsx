@@ -15,7 +15,7 @@ export default function LoadingScreen() {
         <div className="relative mx-auto mb-10 w-20 h-20 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full bg-[var(--color-brand-500)]/20 animate-ping" />
           <div className="absolute inset-2 rounded-full bg-[var(--color-brand-500)]/30" />
-          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-brand-700)] shadow-[0_8px_30px_-4px_rgba(13,148,136,0.6)]" />
+          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-brand-700)] shadow-[0_8px_30px_-4px_rgba(220,38,38,0.6)]" />
         </div>
 
         <p className="text-[11px] uppercase tracking-[0.25em] text-[var(--color-brand-300)] mb-5">

@@ -91,7 +91,7 @@ export default function ContactForm({ answers, verdict, onSubmitted }: Props) {
         rounded-3xl p-6 sm:p-8
         bg-gradient-to-br from-[var(--color-brand-500)]/[0.07] to-[var(--color-brand-700)]/[0.04]
         border border-[var(--color-brand-400)]/25
-        shadow-[0_30px_80px_-30px_rgba(12,59,56,0.28)]
+        shadow-[0_30px_80px_-30px_rgba(90,16,16,0.28)]
       "
     >
       <div className="flex items-center gap-2 mb-1">
@@ -176,8 +176,8 @@ export default function ContactForm({ answers, verdict, onSubmitted }: Props) {
           px-6 py-4 rounded-full text-base font-medium
           bg-gradient-to-b from-[var(--color-brand-500)] to-[var(--color-brand-700)]
           text-white
-          shadow-[0_15px_40px_-10px_rgba(13,148,136,0.55)]
-          hover:shadow-[0_20px_50px_-10px_rgba(13,148,136,0.7)]
+          shadow-[0_15px_40px_-10px_rgba(220,38,38,0.55)]
+          hover:shadow-[0_20px_50px_-10px_rgba(220,38,38,0.7)]
           disabled:opacity-60 disabled:cursor-not-allowed
           transition-all
         "
