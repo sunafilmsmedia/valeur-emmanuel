@@ -1,0 +1,193 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", "Elza", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Surfaces / fond — beige sable clair (chaleureux, premium) */
+  --color-paper: #ece4d8;
+  --color-paper-soft: #f4eee4;
+  --color-surface: #ffffff;
+
+  /* Texte */
+  --color-ink: #16211e;
+  --color-muted: #5f6a65;
+  --color-muted-2: #86908a;
+
+  /* Brand — sarcelle « finance / confiance » (angle ancien comptable).
+     brand-100/200 = encre (texte foncé), brand-300+ = sarcelle (accents). */
+  --color-brand-50: #e9f6f4;
+  --color-brand-100: #14201d; /* titres (encre) */
+  --color-brand-200: #33453f; /* texte secondaire foncé */
+  --color-brand-300: #0f766e; /* labels/accents sarcelle */
+  --color-brand-400: #14b8a6;
+  --color-brand-500: #0d9488; /* sarcelle primaire (boutons) */
+  --color-brand-600: #0f766e;
+  --color-brand-700: #115e59;
+  --color-brand-800: #134e4a;
+  --color-brand-900: #0c3b38;
+
+  /* Accent chaud — or sable (visible sur fond clair) */
+  --color-gold: #b9925a;
+  --color-gold-soft: #9c7a45;
+}
+
+/* Ombres / halos de marque — valeurs arbitraires réutilisées dans les classes. */
+:root {
+  --color-brand-glow: rgba(13, 148, 136, 0.14);
+  --color-brand-shadow: rgba(13, 148, 136, 0.5);
+  --color-brand-shadow-strong: rgba(13, 148, 136, 0.68);
+  --color-brand-shadow-deep: rgba(6, 50, 47, 0.7);
+}
+
+html, body {
+  background: linear-gradient(180deg, #efe7db 0%, #e9e0d2 55%, #ece4d8 100%);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Carte blanche premium (ombre douce et neutre) */
+@utility glass-card {
+  background: #ffffff;
+  border: 1px solid rgba(20, 32, 29, 0.06);
+  box-shadow:
+    0 24px 60px -30px rgba(12, 59, 56, 0.22),
+    0 2px 6px -2px rgba(20, 32, 29, 0.06);
+}
+
+@utility glass-card-light {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(20, 32, 29, 0.06);
+  box-shadow:
+    0 30px 80px -30px rgba(12, 59, 56, 0.28),
+    0 2px 8px -2px rgba(20, 32, 29, 0.08);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* AI shimmer — tons sarcelle / or (visibles sur fond clair) */
+@keyframes ai-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.ai-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    #0f766e 0%,
+    #b9925a 18%,
+    #14b8a6 36%,
+    #0f766e 54%,
+    #b9925a 72%,
+    #14b8a6 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: ai-shimmer 8s linear infinite;
+}
+.ai-shimmer-fast {
+  background-image: linear-gradient(
+    90deg,
+    #0f766e 0%,
+    #b9925a 18%,
+    #14b8a6 36%,
+    #0f766e 54%,
+    #b9925a 72%,
+    #14b8a6 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: ai-shimmer 2.5s linear infinite;
+}
+
+/* Pulse dot */
+@keyframes soft-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: soft-pulse 1.8s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+/* Carte fond non-interactive — faible, sur fond beige */
+.map-mono {
+  filter: grayscale(1) brightness(1.02) contrast(0.95) sepia(0.2) opacity(0.32);
+}
+
+.map-no-interaction {
+  pointer-events: none !important;
+}
+
+/* Leaflet attribution discrète */
+.leaflet-container {
+  background: transparent !important;
+  font-family: var(--font-sans);
+}
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(60, 66, 63, 0.55) !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px;
+}
+.leaflet-control-attribution a {
+  color: rgba(13, 148, 136, 0.9) !important;
+}
+
+/* Étiquettes (tooltips) Leaflet sur la carte régions */
+.region-label {
+  background: #ffffff !important;
+  border: 1px solid rgba(13, 148, 136, 0.3) !important;
+  color: #14201d !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 6px 20px -6px rgba(12, 59, 56, 0.22) !important;
+}
+.region-label::before {
+  display: none !important;
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(13, 148, 136, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(13, 148, 136, 0.45); }
+
+/* Inputs sans bordures par défaut */
+input, textarea, select {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+input:focus, textarea:focus, select:focus { outline: none; }
